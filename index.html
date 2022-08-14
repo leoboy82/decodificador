@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Decodificador</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="Vector.png" alt="Logo do Decodificador de Textos">
-        </div>
+        <img src="Vector.png" alt="Logo do Decodificador de Textos">
     </header>
     <section class="input">
         <textarea model="input" placeholder="Digite seu texto" required></textarea>
         <div class="information">
-          <img src="bi_exclamation-circle-fill.png" alt="Ícone de informação">
+          <img src="bi_exclamation-circle-fill.png" alt="Um sinal de exclamação representando uma mensagem importante">
           <span>Apenas letras minúsculas e sem acento</span>
         </div>
         <div class="actions">
-          <button id="codificar">Codificar</button>
-          <button id="decodificar">Decodificar</button>
+          <button id="codificar">Criptografar</button>
+          <button id="decodificar">Descriptografar</button>
+        </div>
+      </section>
+      <section class="output">
+        <div if="showOutput">
+          <textarea model="output" placeholder="Nenhuma mensagem"></textarea>
+          <button id="copiar">Copiar</button>
+        </div>
+        <div else>
+          <img src="" alt="Imagem qualquer, e um texto informando que não tem textos decodificados">
+          <h2>Nenhuma mensagem encontrada</h2>
+          <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
         </div>
       </section>
     <footer>
